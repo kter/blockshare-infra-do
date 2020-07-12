@@ -17,8 +17,3 @@ resource "digitalocean_kubernetes_node_pool" "k8s_nodes" {
   size       = "s-1vcpu-2gb"
   node_count = 2
 }
-
-resource "local_file" "kubeconfigdo" {
-  content  = digitalocean_kubernetes_cluster.k8s.kube_config[0].raw_config
-  filename = "${path.module}/kubeconfig_do"
-}
