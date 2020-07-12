@@ -90,3 +90,5 @@ jobs:
         run: terraform init
       - id: apply
         run: terraform apply -auto-approve -no-color
+        env:
+          TF_VAR_DO_TOKEN: ${{ secrets.TF_VAR_DO_TOKEN }}
