@@ -2,6 +2,10 @@ provider "aws" {
   region = "us-east-1"
 }
 
+provider "digitalocean" {
+  token = var.do_token
+}
+
 locals {
   project_name = "blockshare"
   domain = "tomohiko.io"
@@ -23,7 +27,3 @@ terraform {
   }
 }
 
-// TODO: use aws_elb_service_account
-module "caller_identity" {
-  source = "./modules/caller_identity"
-}
