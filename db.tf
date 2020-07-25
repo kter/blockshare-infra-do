@@ -22,6 +22,6 @@ resource "digitalocean_database_firewall" "example-fw" {
 
   rule {
     type  = "k8s"
-    value = digitalocean_kubernetes_cluster.k8s.id
+    value = digitalocean_kubernetes_cluster.k8s.name
   }
 }
