@@ -1,7 +1,7 @@
 resource "digitalocean_kubernetes_cluster" "k8s" {
   name    = "blockshare"
   region  = "nyc1"
-  version = "1.16.10-do.0"
+  version = "1.18.6-do.0"
 
   node_pool {
     name       = "main"
